@@ -1,0 +1,91 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HOOKSHIFT — Autonomous treasury hooks</title><style>:root{--bg:#f7faff;--panel:#ffffff;--line:#d8e5f8;--mint:#2563eb;--text:#102b56;--muted:#5c7396}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}button{cursor:pointer;font:inherit}header{display:flex;align-items:center;justify-content:space-between;padding:22px 6%;border-bottom:1px solid var(--line)}.brand{font-size:22px;font-weight:900;letter-spacing:-1px}.brand span{color:var(--mint)}nav{display:flex;gap:26px;color:var(--muted);font-size:14px}.btn{background:var(--mint);border:0;color:#ffffff;padding:13px 19px;border-radius:9px;font-weight:750}.outline{background:transparent;border:1px solid #6580a5;color:var(--text)}main{max-width:1240px;margin:auto;padding:0 25px}.hero{padding:100px 0 80px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}.eyebrow{color:var(--mint);font-size:12px;letter-spacing:2px;font-weight:800;text-transform:uppercase}h1{font-size:clamp(48px,6vw,85px);line-height:1.03;letter-spacing:-4px;margin:18px 0}h1 em{font-style:normal;color:var(--mint)}p{color:var(--muted);line-height:1.75}.hero p{max-width:550px;font-size:17px}.actions{display:flex;gap:12px;margin-top:30px}.terminal{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 30px 100px #163b6811}.term-head{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:18px;color:var(--muted);font-size:12px}.live{color:var(--mint)}.term-big{font-size:36px;font-weight:800;margin:26px 0 4px}.term-row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.term-row span:last-child{color:var(--mint)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat,.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:25px}.stat strong{display:block;font-size:29px;margin-bottom:10px}.stat small{color:var(--muted)}section{padding:85px 0}h2{font-size:38px;letter-spacing:-1.5px;margin:12px 0 26px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card .number{color:var(--mint);font-size:13px}.card h3{font-size:20px}.feed{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feed .card{min-height:145px}.pill{display:inline-block;padding:6px 10px;background:#dbeafe;color:var(--mint);border-radius:20px;font-size:11px}.small{font-size:13px}footer{padding:30px 6%;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between}.notice{margin-top:20px;color:#53729b;font-size:12px}dialog{background:#ffffff;color:#102b56;border:1px solid #6b82a3;border-radius:16px;max-width:430px;padding:30px}dialog::backdrop{background:#102b5688}input{background:#eaf2ff;border:1px solid #6b82a3;border-radius:8px;padding:13px;color:#102b56;width:100%;margin:10px 0 18px}@media(max-width:800px){nav{gap:10px;flex-wrap:wrap;font-size:12px}header{flex-wrap:wrap;gap:14px}.hero{grid-template-columns:1fr;padding-top:65px}.stats,.grid,.feed{grid-template-columns:1fr 1fr}h1{letter-spacing:-2px}}@media(max-width:500px){.stats,.grid,.feed{grid-template-columns:1fr}.actions{flex-wrap:wrap}h1{font-size:52px}footer{display:block}nav{order:3;width:100%;justify-content:space-between}}</style><link rel="icon" type="image/png" href="favicon.png"></head><body><header><a class="brand" href="#">HOOK<span>SHIFT</span><span style="font-size:10px;vertical-align:top;margin-left:8px;color:#5c7396">/ BNB</span></a><nav><a href="#mechanism">Mechanism</a><a href="#agents">Agents</a><a href="#strategies">Strategies</a><a href="#simulator">Demo</a><a href="dashboard.html">Testnet dashboard</a><a href="#safety">Safety</a><a href="https://x.com/hookshiftxyz" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a></nav><button class="btn outline" id="connect" type="button">Connect wallet</button></header><main><div class="hero"><div><div class="eyebrow">BNB CHAIN / BNB CHAIN TREASURY PROTOTYPE</div><h1>Let the strategy <em>shift.</em><br>Keep the rules fixed.</h1><p>HookShift is building AI-managed treasury strategies for onchain tokens. Agents evaluate market signals, propose transparent actions, and operate within strict contract-enforced limits.</p><div class="actions"><button class="btn" id="launch">Explore launch flow ↗</button><a href="#mechanism" class="btn outline">How it works ↓</a></div><div class="notice">Preview environment · No live contracts or treasury funds connected</div></div><div class="terminal"><div class="term-head"><span>◉ HOOKSHIFT / AGENT CONSOLE</span><span class="live">● SIMULATION</span></div><div class="term-big">Strategy engine</div><p class="small">Illustrative agent activity</p><div class="term-row"><span>NETWORK</span><span>BNB CHAIN</span></div><div class="term-row"><span>ACTIVE STRATEGY</span><span>DRIP BUYBACK</span></div><div class="term-row"><span>RISK POLICY</span><span>PLANNED CONTRACT LIMITS</span></div><div class="term-row"><span>AGENT PROPOSAL</span><span>HOLD CURRENT STRATEGY</span></div><div class="term-row"><span>STATUS</span><span>DEMO MODE</span></div><p class="small">No live contract enforcement is deployed.</p></div></div><div class="stats"><div class="stat"><strong>01</strong><small>Chain · BNB</small></div><div class="stat"><strong>03</strong><small>Prototype strategies</small></div><div class="stat"><strong>24/7</strong><small>Target monitoring</small></div><div class="stat"><strong>0 BNB</strong><small>Funds under management · demo</small></div></div><section id="mechanism"><div class="eyebrow">THE MECHANISM</div><h2>Autonomy with boundaries.</h2><div class="grid"><div class="card"><span class="number">01 / FUND</span><h3>Treasury routing</h3><p>Compatible token tax revenue can be routed to a treasury contract, subject to the launch platform's actual integration capabilities.</p></div><div class="card"><span class="number">02 / DECIDE</span><h3>Agent proposals</h3><p>An AI agent reviews onchain activity and proposes a strategy change, recording the reasoning and intended outcome.</p></div><div class="card"><span class="number">03 / EXECUTE</span><h3>Onchain guardrails</h3><p>Allowlisted actions, reserve floors, spending ceilings and approval delays restrict what any strategy can execute.</p></div></div></section><section id="agents"><div class="eyebrow">THE LOGBOOK</div><h2>Every decision leaves a trail.</h2><div class="feed"><div class="card"><span class="pill">SIMULATED · HOLD</span><h3>Drip buyback maintained</h3><p>Insufficient new data to justify changing the treasury allocation. Current policy stays in place.</p></div><div class="card"><span class="pill">SIMULATED · REVIEW</span><h3>Liquidity proposal queued</h3><p>Agent suggests preserving additional treasury assets until the liquidity threshold is met.</p></div></div></section><section id="strategies"><div class="eyebrow">STRATEGY LIBRARY</div><h2>Different conditions. Different hooks.</h2><div class="grid"><div class="card"><span class="number">HOOK / 001</span><h3>Drip buyback</h3><p>Gradual, capped buybacks at scheduled intervals.</p></div><div class="card"><span class="number">HOOK / 002</span><h3>Reserve builder</h3><p>Retains treasury capital until a defined reserve target is reached.</p></div><div class="card"><span class="number">HOOK / 003</span><h3>Liquidity ladder</h3><p>Proposes staged liquidity additions when specified conditions are met.</p></div></div></section><section id="simulator"><div class="eyebrow">INTERACTIVE DEMO / NO REAL FUNDS</div><h2>Try the strategy simulator.</h2>
+<div class="card" style="max-width:760px">
+<label for="strategyChoice">Choose a strategy</label>
+<select id="strategyChoice" style="display:block;margin:12px 0 18px;width:100%;padding:13px;border:1px solid var(--line);border-radius:9px;background:white;color:var(--text)">
+<option value="drip">Drip buyback</option><option value="reserve">Reserve builder</option><option value="liquidity">Liquidity ladder</option></select>
+<label for="treasuryAmount">Simulated treasury balance (BNB)</label>
+<input id="treasuryAmount" type="number" min="0" max="1000000" step="0.1" value="10" style="color:var(--text);background:white;border-color:var(--line)">
+<button class="btn" id="runSim">Generate proposal</button>
+<div id="simResult" role="status" aria-live="polite" style="margin-top:18px;color:var(--text)">Choose a strategy and generate a sample proposal.</div>
+<p class="small">Illustrative arithmetic only. No market feeds, transactions, or contract enforcement.</p>
+</div></section><section id="safety"><div class="eyebrow">SAFETY BY DESIGN</div><h2>The agent cannot rewrite its limits.</h2><p>Our planned architecture separates the strategy proposer from the execution contract. The contract—not the AI—will validate permitted assets, recipients, spending caps, timing and emergency pauses. Real deployment requires contract tests and a security review.</p></section></main><footer><span>© 2026 HOOKSHIFT · Independent project on BNB Chain</span><span><a href="https://x.com/hookshiftxyz" target="_blank" rel="noopener noreferrer" style="color:#2563eb;font-weight:700">Follow @hookshiftxyz on X ↗</a> · Prototype only</span></footer><dialog id="modal"><h2 style="font-size:25px">HookShift launch preview</h2><p>This is a functional interface prototype. Token deployment, wallet signing, and treasury contracts are not yet integrated.</p><label>Token name (local preview only)</label><input id="tokenName" placeholder="Example: Shift Token" maxlength="50"><button class="btn" id="preview" type="button">Create preview</button> <button class="btn outline" id="close" type="button">Close</button><p id="result" aria-live="polite"></p></dialog><script>
+(() => {
+"use strict";
+const $ = id => document.getElementById(id);
+const modal = $("modal");
+$("launch").addEventListener("click", () => {
+  if (typeof modal.showModal === "function") modal.showModal();
+  else modal.setAttribute("open", "");
+});
+$("close").addEventListener("click", () => modal.close());
+modal.addEventListener("click", e => { if (e.target === modal) modal.close(); });
+$("preview").addEventListener("click", () => {
+  const name = $("tokenName").value.trim();
+  $("result").textContent = name
+    ? `Local preview created for "${name}". No token has been deployed.`
+    : "Enter a token name first.";
+});
+const walletBtn = $("connect");
+const provider = window.ethereum;
+function updateWallet(account, chainId) {
+  if (!account) { walletBtn.textContent = "Connect wallet"; walletBtn.title = ""; return; }
+  walletBtn.textContent = account.slice(0,6) + "…" + account.slice(-4);
+  walletBtn.title = chainId === "0x38" ? "Connected to BNB Smart Chain" : "Connected wallet — switch to BNB Smart Chain";
+}
+walletBtn.addEventListener("click", async () => {
+  if (!window.ethereum?.request) {
+    alert("No browser wallet detected. Open this site in MetaMask or another EVM wallet browser.");
+    return;
+  }
+  try {
+    const accounts = await window.ethereum.request({method:"eth_requestAccounts"});
+    if (!accounts?.length) return;
+    let chainId = await window.ethereum.request({method:"eth_chainId"});
+    if (chainId !== "0x38") {
+      try {
+        await window.ethereum.request({method:"wallet_switchEthereumChain",params:[{chainId:"0x38"}]});
+        chainId = "0x38";
+      } catch (e) {
+        if (e.code === 4902) {
+          try {
+            await window.ethereum.request({method:"wallet_addEthereumChain",params:[{
+              chainId:"0x38",chainName:"BNB Smart Chain Mainnet",
+              nativeCurrency:{name:"BNB",symbol:"BNB",decimals:18},
+              rpcUrls:["https://bsc-dataseed.bnbchain.org"],
+              blockExplorerUrls:["https://bscscan.com"]
+            }]});
+            chainId = await window.ethereum.request({method:"eth_chainId"});
+          } catch { alert("BNB Chain was not added. You can still browse the demo."); }
+        } else { alert("Switch to BNB Smart Chain to use the intended network."); }
+      }
+    }
+    updateWallet(accounts[0], chainId);
+  } catch(e) {
+    if(e.code !== 4001) alert("Wallet connection failed: " + (e.message || "Unknown error"));
+  }
+});
+if (provider?.on) {
+  provider.on("accountsChanged", async accounts => {
+    const chain = await provider.request({method:"eth_chainId"}).catch(()=>"");
+    updateWallet(accounts?.[0],chain);
+  });
+  provider.on("chainChanged", async chain => {
+    const accounts = await provider.request({method:"eth_accounts"}).catch(()=>[]);
+    updateWallet(accounts?.[0],chain);
+  });
+}
+$("runSim").addEventListener("click", () => {
+  const amount = Number($("treasuryAmount").value);
+  if (!Number.isFinite(amount) || amount < 0 || amount > 1000000 || $("treasuryAmount").value.trim()==="") {
+    $("simResult").textContent = "Enter a valid simulated balance between 0 and 1,000,000 BNB.";
+    return;
+  }
+  const strategy = $("strategyChoice").value;
+  const fraction = {drip:0.05,reserve:0,liquidity:0.10}[strategy];
+  const proposal = amount*fraction;
+  const retained = amount-proposal;
+  const action = {drip:"Illustrative 5% buyback allocation",reserve:"Hold 100% in treasury",liquidity:"Illustrative 10% liquidity allocation"}[strategy];
+  $("simResult").textContent = `${action}: ${proposal.toFixed(4)} BNB proposed; ${retained.toFixed(4)} BNB retained. Simulation only — no transaction will be sent.`;
+});
+})();
+</script></body></html>

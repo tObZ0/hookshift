@@ -1,0 +1,5 @@
+{
+  "name":"hookshift-bnb","version":"0.2.0","private":true,
+  "scripts":{"test":"hardhat test","compile":"hardhat compile","deploy:testnet":"hardhat run scripts/deploy.js --network bscTestnet","serve":"npx serve ."},
+  "devDependencies":{"hardhat":"^2.22.18","@nomicfoundation/hardhat-toolbox":"^5.0.0","dotenv":"^16.4.5"}
+}
